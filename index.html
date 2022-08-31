@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futur Digital File Manager</title>
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <!-- plugins -->
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/addons/datatables.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <svg class="logo"><use href="#logo"></use></svg>
+            <ul>
+                <li class="search-bar">
+                    <span><i class="fas fa-regular fa-magnifying-glass"></i></span>
+                
+                    <!-- <input type="text" placeholder="Recherche" class="search-input" /> -->
+                    <span class="search-btn"><i class="fas fa-regular fa-caret-down"></i></span>
+                </li>
+                <li class="nav-actions">
+                    <button class="action-btn">
+                        <span class="ripple"></span>
+                        <i class="fas fa-regular fa-circle-half-stroke"></i>
+                    </button>
+                    <button class="action-btn uploadBtn">
+                        <span class="ripple"></span>
+                        <i class="fas fa-regular fa-cloud-arrow-up"></i>
+                    </button>
+                    <button class="action-btn">
+                        <span class="ripple"></span>
+                        <i class="fas fa-regular fa-folder-plus"></i>
+                    </button>
+                    <button class="action-btn">
+                        <span class="ripple"></span>
+                        <i class="fa-solid fa-user"></i>  
+                    </button>
+                    <button class="action-btn">
+                        <span class="ripple"></span>
+                        <i class="fas fa-regular fa-list"></i>
+                    </button>
+                    <button class="action-btn">
+                        <span class="ripple">
+                            <i class="fas fa-regular fa-arrow-right-from-bracket"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <div class="row-1">
+          
+
+                <label ></label>
+            <div class="file-actions">
+                    <button><i class="fa-solid fa-trash-can"></i>Supprimer</button>
+                    <button><i class="fa-solid fa-file-zipper"></i>Zip</button>
+                    <button><i class="fa-solid fa-copy"></i>Copier</button>
+            </div>
+
+            </div>
+            <div class="table-sites">
+                <table  id="dtBasicExample"  >
+                    <thead>
+                    <tr class="table100-head">
+                    <th class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="check-all">
+                            <label class="custom-control-label" for="check-all"></label>
+                        </div>
+                    </th>
+                    <th class="column1 th-sm">Nom</th>
+                    <th class="column2">Taille</th>
+                    <th class="column3">Modifié le</th>
+                    <th class="column4">Permissions</th>
+                    <th class="column5">Propriétaire</th>
+                    <th class="column6">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                
+
+                    <tr>
+                    
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check1">
+                            <label class="custom-control-label" for="check1"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check3">
+                            <label class="custom-control-label" for="check3"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check4">
+                            <label class="custom-control-label" for="check4"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check1">
+                            <label class="custom-control-label" for="check1"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check3">
+                            <label class="custom-control-label" for="check3"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check4">
+                            <label class="custom-control-label" for="check4"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check1">
+                            <label class="custom-control-label" for="check1"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check3">
+                            <label class="custom-control-label" for="check3"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check4">
+                            <label class="custom-control-label" for="check4"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check1">
+                            <label class="custom-control-label" for="check1"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check3">
+                            <label class="custom-control-label" for="check3"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check4">
+                            <label class="custom-control-label" for="check4"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check1">
+                            <label class="custom-control-label" for="check1"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check3">
+                            <label class="custom-control-label" for="check3"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check4">
+                            <label class="custom-control-label" for="check4"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check1">
+                            <label class="custom-control-label" for="check1"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check3">
+                            <label class="custom-control-label" for="check3"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class="column1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input item-check" id="check4">
+                            <label class="custom-control-label" for="check4"></label>
+                        <!-- </div> -->
+                    </td>
+                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
+                    <td class="column3">dossier</td>
+                    <td class="column4">01/06/22 09:55</td>
+                    <td class="column5">0755</td>
+                    <td class="column6">devm:devm</td>
+                    <td class="column6">
+                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
+                        
+                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
+                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
+                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
+                    </td>
+                    </tr>
+                    
+                
+
+                
+                    
+                    </tbody>
+                    <tfoot>
+                        <tr>
+
+                            <td></td>
+                            <td>Taille totale : <small class="totalSize">6.08 KB</small></td>
+                            <td>Fichiers : <small class="filesNumber">0 <svg width="10px" height="11px"><use href="#file"></use></svg></small></td>
+                            <td>Dossiers : <small class="foldersNumber">10 <svg width="10px" height="11px"><use href="#folder1"></use></svg></small></td>
+                            <td>Taille de la partition : <small class="partitioSize">104.52 GB</small></td>
+                            <td>Espace libre : <small class="freeSpace">258.89 GB</small></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                    </table>
+            </div>
+
+            <div class="row-2">
+          
+
+                <div class="file-actions">
+                        <button><i class="fa-solid fa-trash-can"></i>Supprimer</button>
+                        <button><i class="fa-solid fa-file-zipper"></i>Zip</button>
+                        <button><i class="fa-solid fa-copy"></i>Copier</button>
+                </div>
+            
+                </div>
+    </main>
+    <div class="uploadBoxWrapper">
+        <div class="overlay"></div>
+        <div class="drop">
+          <div class="cont">
+            <i class="fa fa-cloud-upload"></i>
+            <div class="tit">Déposer ici les fichiers à téléverser</div>
+            <h2>ou</h2>
+            <div class="browse">
+                cliquez ici pour parcourir
+            </div>
+          </div>
+          <output id="list"></output>
+          <form class="upload" method="post" action="" enctype="multipart/form-data" novalidate="">
+           
+              <input id="files"  title="" multiple="true" name="files[]" type="file" />
+        </form>
+        </div>
+      </div>
+    <!-- Footer -->
+
+    <footer>
+        <h3>&lt;h1> Futur Digital 	&lt;/h1></h3>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- svg icons & images -->
+    <svg display="none">
+        <symbol width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" id="folder">
+            <path d="M0.984375 26.9063H28.0312C28.5469 26.9063 29.0156 26.4844 29.0156 25.9219V6.28125C29.0156 5.76562 28.5937 5.29688 28.0312 5.29688H14.5312C14.1562 5.29688 13.8281 5.10937 13.6875 4.78125L12.8906 3.1875C12.7031 2.85938 12.375 2.67188 12.0469 2.67188H0.984375C0.421875 2.67187 0 3.09375 0 3.65625V25.9219C0 26.4375 0.421875 26.9063 0.984375 26.9063Z" fill="#F2786B"/>
+            <path d="M1.40625 27.3281H27.9844C28.5 27.3281 28.9687 26.9063 28.9687 26.3438V6.70313C28.9687 6.1875 28.5469 5.71875 27.9844 5.71875H14.5312C14.1562 5.71875 13.8281 5.53125 13.6875 5.20313L12.8906 3.60937C12.7031 3.28125 12.375 3.09375 12.0469 3.09375H0.984375C0.421875 3.09375 0 3.5625 0 4.07812V25.9219C0 26.6719 0.609375 27.3281 1.40625 27.3281Z" fill="#D45947"/>
+            <path d="M28.2188 6.89062H0.75V16.7812H28.2188V6.89062Z" fill="#F3F3F3"/>
+            <path d="M1.125 6.89062H0.75V16.7812H1.125V6.89062Z" fill="#E2E2E2"/>
+            <path d="M28.2188 6.89062H0.75V7.3125H28.2188V6.89062Z" fill="#E2E2E2"/>
+            <path d="M30 8.71875V25.5C30 26.2969 29.3906 26.9063 28.5938 26.9063H1.40625C0.609375 26.9063 0 26.2969 0 25.5V10.9687C0 10.1719 0.609375 9.5625 1.40625 9.5625H15.0938C15.4688 9.5625 15.8437 9.42187 16.0781 9.14062L17.4844 7.73437C17.7656 7.45312 18.0938 7.3125 18.4688 7.3125H28.5938C29.3906 7.3125 30 7.96875 30 8.71875Z" fill="#F69F99"/>
+            <path d="M30 9.14062V25.9219C30 26.7187 29.3906 27.3281 28.5938 27.3281H1.40625C0.609375 27.3281 0 26.7187 0 25.9219V11.3906C0 10.5937 0.609375 9.98437 1.40625 9.98437H15.0938C15.4688 9.98437 15.8437 9.84375 16.0781 9.5625L17.4844 8.15625C17.7656 7.875 18.0938 7.73438 18.4688 7.73438H28.5938C29.3906 7.73438 30 8.39062 30 9.14062Z" fill="#F2786B"/>
+            </symbol>
+
+            <symbol id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1760 591" style="enable-background:new 0 0 1760 591;" xml:space="preserve">
+
+                <path class="st0" d="M445.5,259.2c0-0.8-0.1-1.5-0.1-2.3s-0.1-1.5-0.1-2.3c-0.3-4.7-0.7-9.4-1.3-14.2  c-9.7-70.2-61.5-127.5-132.7-146.7c-0.1,0-0.2-0.1-0.3-0.1c-16.6-4.4-34.3-6.8-52.8-6.8c-39.4,1-81.9,18.4-116.4,53.5  c-53.4,54.4-66.1,132.4-33.7,201.4c16.5,35.1,41,64.2,68.9,90.6c27.6,26.2,58.6,48,88.9,70.7c1.8,1.3,2.8,1.1,4.4-0.2  c20.4-15.6,41.6-30.3,61.4-46.7c16.2-13.4,31.7-27.4,46-42.6c8.8-9.3,7.7-24.2-2.3-32.1c-6.2-4.9-12.9-10.3-18.4-14.8  c-0.8-0.5-1.7-1.1-2.5-1.8c-7.9-6.5-15.9-13-23.7-19.5c-1.5-1.3-2.8-2.3-3.7-3.1c-2.2-1.9-3.6-1.9-6-0.3  c-61.3,39.3-141.2,2.5-150.7-69.6c-0.5-4.2-0.6-8.4-0.9-12.6c0.1-50,40.2-93.5,89.9-96.8c38-2.5,68.6,12,89.7,43.5  c3.8,5.6,6.9,11.3,9.5,17.1c0,0,0,0.1-0.1,0.1c5.1,11.6,7.6,23.4,7.7,35.4c0,1.1,0,2.3-0.1,3.4c0,0.3,0,0.6,0,0.9  c0,0.8-0.1,1.5-0.1,2.3c-0.5,6.1-1.5,12.5-3.1,18.6c0,0.1-0.1,0.2-0.1,0.3c-1.9,6.8-4.5,13.6-7.9,20.4c-0.5,1.1-0.8,2-0.8,2.8  c-0.1,1.3,0.5,2.3,2.1,3.6c0.1,0.1,0.2,0.1,0.3,0.2c1.2,1,2.5,1.9,3.7,2.7c9.1,7.3,28.1,22.8,41.8,34c8.4,6.9,21.1,4,25.7-5.9  c10.4-22.1,16.6-45.2,17.7-69.6c0.1-2.5,0.2-5,0.2-7.5c0-0.4,0-0.8,0-1.2C445.6,262.4,445.6,260.8,445.5,259.2z"/>
+                <path class="st0" d="M212.5,278c8.7,30.1,40.7,47.6,70.7,38.8c30.4-9,47.7-40.5,38.8-70.7c-9-30.7-40.5-48.2-70.9-39.5  c-22.2,6.5-37.3,25.2-40.5,46.8C209.6,261.5,210.1,269.8,212.5,278"/>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_1_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_2_">
+                                    <use xlink:href="#SVGID_1_" style="overflow:visible;"/>
+                                </clipPath>
+                                <polygon class="st1" points="556.2,213.7 556.2,240.6 607.9,240.6 607.9,271.2 556.2,271.2 556.2,322.3 524.4,322.3       524.4,183.1 608.9,183.1 608.9,213.7     "/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_3_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_4_">
+                                    <use xlink:href="#SVGID_3_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st2" d="M720.9,222.9v99.5h-29.8V313c-5.4,7.4-15.3,12.1-28.5,12.1c-20.1,0-37.2-14.3-37.2-41.2v-61.1h29.8v56.7      c0,12.3,7.8,18.1,17.3,18.1c10.9,0,18.5-6.4,18.5-20.5v-54.3L720.9,222.9L720.9,222.9z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_5_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_6_">
+                                    <use xlink:href="#SVGID_5_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st3" d="M780.6,251.5v35.2c0,8.6,7.4,9.4,20.5,8.6v27.1c-39,4-50.3-7.8-50.3-35.6v-35.2h-15.9V223h15.9v-19l29.8-9      v27.9h20.5v28.6H780.6z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_7_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_8_">
+                                    <use xlink:href="#SVGID_7_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st4" d="M914.1,222.9v99.5h-29.8V313c-5.4,7.4-15.3,12.1-28.5,12.1c-20.1,0-37.2-14.3-37.2-41.2v-61.1h29.8v56.7      c0,12.3,7.8,18.1,17.3,18.1c10.9,0,18.5-6.4,18.5-20.5v-54.3L914.1,222.9L914.1,222.9z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_9_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_10_">
+                                    <use xlink:href="#SVGID_9_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st5" d="M995.7,220.9v33.8c-12.3-2-29.8,3-29.8,22.7v45H936v-99.5h29.8v17.7C969.8,227.2,983.2,220.9,995.7,220.9"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_11_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_12_">
+                                    <use xlink:href="#SVGID_11_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st6" d="M1183.7,252.7c0,39.4-29.2,69.6-67.6,69.6h-55.7V183.1h55.7C1154.5,183.1,1183.7,213.3,1183.7,252.7       M1153.1,252.7c0-23.9-15.1-39-37-39h-23.9v78h23.9C1138,291.7,1153.1,276.6,1153.1,252.7"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_13_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_14_">
+                                    <use xlink:href="#SVGID_13_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st7" d="M1197.6,196.2c0-9.7,8.2-17.9,17.9-17.9c9.7,0,17.9,8.2,17.9,17.9s-8.2,17.9-17.9,17.9      C1205.8,214.1,1197.6,206,1197.6,196.2 M1200.6,222.9h29.8v99.5h-29.8V222.9z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_15_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_16_">
+                                    <use xlink:href="#SVGID_15_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st8" d="M1354.4,222.9v94.5c0,33.4-26.1,47.6-52.5,47.6c-20.7,0-38-7.8-47.2-24.1l25.5-14.7      c3.8,7,9.6,12.5,22.7,12.5c13.9,0,22.5-7.2,22.5-21.3v-9.2c-6.6,8.2-16.1,12.9-29,12.9c-28.3,0-48.9-23.1-48.9-50.5      s20.7-50.5,48.9-50.5c12.9,0,22.5,4.8,29,12.9v-10.1L1354.4,222.9L1354.4,222.9z M1325.4,270.6c0-13.7-9.9-23.1-24.1-23.1      s-24.1,9.4-24.1,23.1s9.9,23.1,24.1,23.1S1325.4,284.3,1325.4,270.6"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_17_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_18_">
+                                    <use xlink:href="#SVGID_17_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st9" d="M1373.3,196.2c0-9.7,8.2-17.9,17.9-17.9c9.7,0,17.9,8.2,17.9,17.9s-8.2,17.9-17.9,17.9      C1381.5,214.1,1373.3,206,1373.3,196.2 M1376.3,222.9h29.8v99.5h-29.8V222.9z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_19_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_20_">
+                                    <use xlink:href="#SVGID_19_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st10" d="M1465.8,251.5v35.2c0,8.6,7.4,9.4,20.5,8.6v27.1c-39,4-50.3-7.8-50.3-35.6v-35.2h-15.9V223h15.9v-19      l29.8-9v27.9h20.5v28.6H1465.8z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_21_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_22_">
+                                    <use xlink:href="#SVGID_21_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st11" d="M1603.3,222.9v99.5h-29.8V313c-6.6,7.6-16.3,12.1-29.6,12.1c-26.1,0-47.6-22.9-47.6-52.5      s21.5-52.5,47.6-52.5c13.3,0,23.1,4.6,29.6,12.1v-9.4L1603.3,222.9L1603.3,222.9z M1573.5,272.6c0-14.9-9.9-24.3-23.7-24.3      c-13.7,0-23.7,9.4-23.7,24.3s9.9,24.3,23.7,24.3C1563.5,296.9,1573.5,287.5,1573.5,272.6"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_23_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_24_">
+                                    <use xlink:href="#SVGID_23_" style="overflow:visible;"/>
+                                </clipPath>
+                                <rect x="1625.2" y="177.1" class="st12" width="29.8" height="145.2"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_25_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_26_">
+                                    <use xlink:href="#SVGID_25_" style="overflow:visible;"/>
+                                </clipPath>
+                                <polygon class="st13" points="528.5,371.4 535.3,371.4 546.2,410.9 557.9,371.4 564.4,371.4 576,410.9 587,371.4 593.7,371.4       579.9,419.4 572.5,419.4 561.1,381.1 549.7,419.4 542.3,419.4     "/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_27_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_28_">
+                                    <use xlink:href="#SVGID_27_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st14" d="M612.5,414.7c4.7,0,8.2-2.2,9.9-5l5.1,2.9c-3,4.7-8.2,7.8-15.1,7.8c-11,0-18.4-7.8-18.4-18.1      c0-10.2,7.3-18.1,18-18.1c10.4,0,17.1,8.5,17.1,18.1c0,0.9-0.1,1.8-0.2,2.7h-28.8C601.2,411.2,606.1,414.7,612.5,414.7       M600.1,399.8H623c-1-6.8-5.9-10-11.1-10C605.5,389.9,601,393.8,600.1,399.8"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_29_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_30_">
+                                    <use xlink:href="#SVGID_29_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st15" d="M672.2,402.3c0,10.2-7.8,18.1-17.4,18.1c-5.8,0-10.2-2.6-13-6.8v5.9h-6v-48h6V391c2.7-4.2,7.1-6.8,13-6.8      C664.4,384.2,672.2,392.1,672.2,402.3 M666.2,402.3c0-7-5.3-12.3-12.1-12.3c-6.9,0-12.2,5.3-12.2,12.3s5.3,12.3,12.2,12.3      C660.9,414.6,666.2,409.3,666.2,402.3"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_31_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_32_">
+                                    <use xlink:href="#SVGID_31_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st16" d="M730.5,420.5l-4.9-5.2c-3.3,3.1-7.8,5-13.7,5c-9.5,0-16.1-5.3-16.1-13.9c0-5.7,2.9-10.9,8.8-13.9      c-1.8-2.3-3.1-4.9-3.1-8.7c0-8.2,6.7-13.4,14.1-13.4c6.3,0,12,3.6,14.3,9.8l-5.4,3.1c-1.4-4.2-4.7-6.7-8.9-6.7      c-4.3,0-7.9,2.8-7.9,7.1c0,3.3,1.9,5.6,4.3,8.2l13.1,14c1.2-2.4,2-5.4,2.5-8.7l5.5,3.2c-0.6,3.6-1.9,7.1-3.7,10.2l6.4,6.8      L730.5,420.5z M721.5,410.9l-13-13.9c-4.7,2-6.4,5.8-6.4,9.1c0,5.1,3.6,8.2,9.9,8.2C715.8,414.3,719,413.1,721.5,410.9"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_33_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_34_">
+                                    <use xlink:href="#SVGID_33_" style="overflow:visible;"/>
+                                </clipPath>
+                                <polygon class="st17" points="789.5,385.1 775.8,419.4 768.8,419.4 755.1,385.1 761.5,385.1 772.3,413.1 783.1,385.1     "/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_35_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_36_">
+                                    <use xlink:href="#SVGID_35_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st18" d="M793.6,374.9c0-2.2,1.8-4,4.1-4c2.2,0,4,1.9,4,4c0,2.2-1.8,4-4,4C795.4,378.9,793.6,377.1,793.6,374.9       M794.6,385.1h6v34.3h-6V385.1z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_37_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_38_">
+                                    <use xlink:href="#SVGID_37_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st19" d="M834,410c0,6.4-5.5,10.3-12.8,10.3c-6.9,0-11.7-3.3-13.7-8l5.1-3c1.1,3.3,4.3,5.4,8.5,5.4      c3.6,0,6.8-1.3,6.8-4.7c0-7.3-19.2-3.2-19.2-15.6c0-6,5.2-10.2,12.1-10.2c5.6,0,10.2,2.7,12.4,7.1l-5,2.8      c-1.3-3.1-4.3-4.4-7.3-4.4c-3.1,0-6.1,1.5-6.1,4.6C814.8,401.7,834,397.4,834,410"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_39_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_40_">
+                                    <use xlink:href="#SVGID_39_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st20" d="M839.7,374.9c0-2.2,1.8-4,4-4s4,1.9,4,4c0,2.2-1.8,4-4,4S839.7,377.1,839.7,374.9 M840.7,385.1h6v34.3h-6      V385.1z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_41_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_42_">
+                                    <use xlink:href="#SVGID_41_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st21" d="M892.1,402.3c0,10.2-7.8,18.1-17.4,18.1c-5.8,0-10.2-2.6-13-6.8v5.9h-6v-48h6V391c2.7-4.2,7.1-6.8,13-6.8      C884.3,384.2,892.1,392.1,892.1,402.3 M886.2,402.3c0-7-5.3-12.3-12.1-12.3c-6.9,0-12.2,5.3-12.2,12.3s5.3,12.3,12.2,12.3      C880.9,414.6,886.2,409.3,886.2,402.3"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_43_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_44_">
+                                    <use xlink:href="#SVGID_43_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st22" d="M898.2,374.9c0-2.2,1.8-4,4-4s4,1.9,4,4c0,2.2-1.8,4-4,4S898.2,377.1,898.2,374.9 M899.3,385.1h6v34.3h-6      V385.1z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_45_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_46_">
+                                    <use xlink:href="#SVGID_45_" style="overflow:visible;"/>
+                                </clipPath>
+                                <rect x="914.4" y="369.3" class="st23" width="6" height="50.1"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_47_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_48_">
+                                    <use xlink:href="#SVGID_47_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st24" d="M928.4,374.9c0-2.2,1.8-4,4.1-4c2.2,0,4,1.9,4,4c0,2.2-1.8,4-4,4C930.2,378.9,928.4,377.1,928.4,374.9       M929.5,385.1h6v34.3h-6V385.1z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_49_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_50_">
+                                    <use xlink:href="#SVGID_49_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st25" d="M954.1,390.9v18.6c0,5.2,3,4.9,9.1,4.6v5.4c-10.3,1.4-15.1-1.4-15.1-10v-18.6h-6.8v-5.8h6.8v-7.8l6-1.8      v9.6h9.1v5.8L954.1,390.9L954.1,390.9z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_51_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_52_">
+                                    <use xlink:href="#SVGID_51_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st26" d="M985.2,414.7c4.7,0,8.2-2.2,9.9-5l5.1,2.9c-3,4.7-8.2,7.8-15.1,7.8c-11,0-18.4-7.8-18.4-18.1      c0-10.2,7.3-18.1,18-18.1c10.4,0,17.1,8.5,17.1,18.1c0,0.9-0.1,1.8-0.2,2.7h-28.8C973.9,411.2,978.8,414.7,985.2,414.7       M972.8,399.8h22.9c-1-6.8-5.9-10-11-10C978.2,389.9,973.7,393.8,972.8,399.8 M985.9,380.4h-5.8l5.5-9.1h7.2L985.9,380.4z"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_53_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_54_">
+                                    <use xlink:href="#SVGID_53_" style="overflow:visible;"/>
+                                </clipPath>
+                                <rect x="1025.8" y="369.3" class="st27" width="6" height="50.1"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_55_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_56_">
+                                    <use xlink:href="#SVGID_55_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st28" d="M1038.9,402.3c0-10.2,8-18.1,18.1-18.1c10,0,18.1,7.9,18.1,18.1s-8.1,18.1-18.1,18.1      C1047,420.3,1038.9,412.4,1038.9,402.3 M1069.1,402.3c0-6.9-5.3-12.2-12.1-12.2c-6.8,0-12.1,5.3-12.1,12.2s5.3,12.2,12.1,12.2      C1063.8,414.5,1069.1,409.2,1069.1,402.3"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_57_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_58_">
+                                    <use xlink:href="#SVGID_57_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st29" d="M1080.2,402.3c0-10.2,7.7-18.1,18.1-18.1c6.8,0,12.6,3.6,15.2,9l-5,2.9c-1.7-3.6-5.6-6-10.2-6      c-6.9,0-12.1,5.3-12.1,12.2c0,6.9,5.2,12.1,12.1,12.1c4.7,0,8.4-2.4,10.4-6l5.1,3c-2.9,5.4-8.7,8.9-15.4,8.9      C1087.9,420.3,1080.2,412.4,1080.2,402.3"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_59_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_60_">
+                                    <use xlink:href="#SVGID_59_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st30" d="M1153.5,385.1v34.3h-6v-5.9c-2.7,4.2-7.1,6.8-13,6.8c-9.5,0-17.4-7.9-17.4-18.1s7.8-18.1,17.4-18.1      c5.8,0,10.2,2.6,13,6.8V385h6V385.1z M1147.6,402.3c0-7-5.3-12.3-12.2-12.3c-6.9,0-12.1,5.3-12.1,12.3s5.3,12.3,12.1,12.3      C1142.3,414.6,1147.6,409.3,1147.6,402.3"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_61_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_62_">
+                                    <use xlink:href="#SVGID_61_" style="overflow:visible;"/>
+                                </clipPath>
+                                <rect x="1162.6" y="369.3" class="st31" width="6" height="50.1"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <defs>
+                                    <rect id="SVGID_63_" width="1760" height="591"/>
+                                </defs>
+                                <clipPath id="SVGID_64_">
+                                    <use xlink:href="#SVGID_63_" style="overflow:visible;"/>
+                                </clipPath>
+                                <path class="st32" d="M1194.3,414.7c4.7,0,8.2-2.2,9.9-5l5.1,2.9c-3,4.7-8.2,7.8-15.1,7.8c-11,0-18.4-7.8-18.4-18.1      c0-10.2,7.3-18.1,18-18.1c10.4,0,17.1,8.5,17.1,18.1c0,0.9-0.1,1.8-0.2,2.7h-28.8C1183.1,411.2,1187.9,414.7,1194.3,414.7       M1181.9,399.8h22.9c-1-6.8-5.9-10-11.1-10C1187.3,389.9,1182.8,393.8,1181.9,399.8"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                </symbol>
+                    <symbol id="file" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 9.58333H0.833333C0.61232 9.58333 0.400358 9.49554 0.244078 9.33926C0.0877973 9.18297 0 8.97101 0 8.75V0.833333C0 0.61232 0.0877973 0.400358 0.244078 0.244078C0.400358 0.0877974 0.61232 0 0.833333 0H4.79167C4.85833 0 4.91521 0.0335417 4.95333 0.0822917L7.00104 2.13C7.02628 2.14879 7.04683 2.17316 7.06111 2.2012C7.07538 2.22924 7.08299 2.2602 7.08333 2.29167V8.75C7.08333 8.97101 6.99554 9.18297 6.83926 9.33926C6.68298 9.49554 6.47101 9.58333 6.25 9.58333ZM5 0.704375V2.08333H6.37896L5 0.704375ZM6.66667 2.5H4.79167C4.73641 2.5 4.68342 2.47805 4.64435 2.43898C4.60528 2.39991 4.58333 2.34692 4.58333 2.29167V0.416667H0.833333C0.722826 0.416667 0.616846 0.460565 0.538706 0.538705C0.460565 0.616846 0.416667 0.722826 0.416667 0.833333V8.75C0.416667 8.86051 0.460565 8.96649 0.538706 9.04463C0.616846 9.12277 0.722826 9.16667 0.833333 9.16667H6.25C6.36051 9.16667 6.46649 9.12277 6.54463 9.04463C6.62277 8.96649 6.66667 8.86051 6.66667 8.75V2.5ZM5.41667 7.91667H1.66667C1.61141 7.91667 1.55842 7.89472 1.51935 7.85565C1.48028 7.81658 1.45833 7.76359 1.45833 7.70833C1.45833 7.65308 1.48028 7.60009 1.51935 7.56102C1.55842 7.52195 1.61141 7.5 1.66667 7.5H5.41667C5.47192 7.5 5.52491 7.52195 5.56398 7.56102C5.60305 7.60009 5.625 7.65308 5.625 7.70833C5.625 7.76359 5.60305 7.81658 5.56398 7.85565C5.52491 7.89472 5.47192 7.91667 5.41667 7.91667ZM5.41667 6.25H1.66667C1.61141 6.25 1.55842 6.22805 1.51935 6.18898C1.48028 6.14991 1.45833 6.09692 1.45833 6.04167C1.45833 5.98641 1.48028 5.93342 1.51935 5.89435C1.55842 5.85528 1.61141 5.83333 1.66667 5.83333H5.41667C5.47192 5.83333 5.52491 5.85528 5.56398 5.89435C5.60305 5.93342 5.625 5.98641 5.625 6.04167C5.625 6.09692 5.60305 6.14991 5.56398 6.18898C5.52491 6.22805 5.47192 6.25 5.41667 6.25ZM5.41667 4.58333H1.66667C1.61141 4.58333 1.55842 4.56138 1.51935 4.52231C1.48028 4.48324 1.45833 4.43025 1.45833 4.375C1.45833 4.31975 1.48028 4.26676 1.51935 4.22769C1.55842 4.18862 1.61141 4.16667 1.66667 4.16667H5.41667C5.47192 4.16667 5.52491 4.18862 5.56398 4.22769C5.60305 4.26676 5.625 4.31975 5.625 4.375C5.625 4.43025 5.60305 4.48324 5.56398 4.52231C5.52491 4.56138 5.47192 4.58333 5.41667 4.58333Z" fill="white"/>
+                        </symbol>
+                    
+                        <symbol id="folder1"  viewBox="0 0 9 8"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.08333 1.25001H4.46667L4.33333 0.833343C4.2469 0.588855 4.08656 0.377302 3.87454 0.227993C3.66252 0.0786836 3.40932 -0.000990375 3.15 9.29316e-06H1.25C0.918479 9.29316e-06 0.600537 0.131705 0.366117 0.366126C0.131696 0.600546 0 0.918489 0 1.25001V6.66668C0 6.9982 0.131696 7.31614 0.366117 7.55056C0.600537 7.78498 0.918479 7.91668 1.25 7.91668H7.08333C7.41485 7.91668 7.7328 7.78498 7.96722 7.55056C8.20164 7.31614 8.33333 6.9982 8.33333 6.66668V2.50001C8.33333 2.16849 8.20164 1.85055 7.96722 1.61613C7.7328 1.38171 7.41485 1.25001 7.08333 1.25001ZM7.5 6.66668C7.5 6.77718 7.4561 6.88316 7.37796 6.9613C7.29982 7.03944 7.19384 7.08334 7.08333 7.08334H1.25C1.13949 7.08334 1.03351 7.03944 0.955372 6.9613C0.877232 6.88316 0.833333 6.77718 0.833333 6.66668V1.25001C0.833333 1.1395 0.877232 1.03352 0.955372 0.955382C1.03351 0.877241 1.13949 0.833343 1.25 0.833343H3.15C3.23735 0.833117 3.32256 0.860351 3.3936 0.911193C3.46463 0.962036 3.51788 1.03392 3.54583 1.11668L3.77083 1.80001C3.79879 1.88277 3.85204 1.95465 3.92307 2.00549C3.9941 2.05633 4.07932 2.08357 4.16667 2.08334H7.08333C7.19384 2.08334 7.29982 2.12724 7.37796 2.20538C7.4561 2.28352 7.5 2.3895 7.5 2.50001V6.66668Z" fill="white"/>
+                            </symbol>
+                        
+                    
+    </svg>
+
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+    <!-- plugins -->
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/addons/datatables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+          $('#dtBasicExample').DataTable({
+            "paging": true  ,
+            // "pagingType": "simple"
+          });
+          $('.dataTables_length').addClass('bs-select');
+        });
+      </script>
+</body>
+
+</html>

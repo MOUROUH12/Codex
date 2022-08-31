@@ -1,0 +1,170 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #e4e4e4;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $color2-dark;
+    border-radius: 10px;
+    border: 2px solid rgb(219, 219, 219);
+  }
+
+
+@mixin darkTheme($header:false,$main:false,$footer:false,$body:false,$upload:false) {
+    @if $header {
+        &.dark {
+            background: $color1-dark;
+            border-color:  $border-dark-color;
+            nav {
+                .logo {
+                    fill:  darken($color0-dark, 20%);
+                }
+    
+            }
+            ul {
+                .search-bar {
+                    .search-input{
+                        color: darken($color0-dark, 25%) ;
+                        background: $color2-dark;
+                        border-color: $border-dark-color;
+                        font-weight: normal;
+                        &::placeholder {
+                            color: darken($color0-dark, 60%) ;
+                        }
+                    }
+                    span {
+                        i {
+                            color:  darken($color0-dark, 45%);
+                        }
+                    }
+                }
+                .nav-actions {
+                 button {
+                    background: $color3-dark ;
+                    color: darken($color0-dark, 20%);
+                    &:hover {
+                        background:lighten( $color3-dark , 10%);
+                    }
+                 }
+                }
+            }
+        }
+        
+    }
+    @if $body {
+        &.dark{
+            background: $color4-dark;
+            color: $color0-light;
+            font-weight: normal;    
+        }
+    }
+    @if $main {
+        &.dark{
+            .row-1  {
+                label {
+                    color: darken($color0-dark, 25%);
+                    .custom-select {
+                        background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%2313a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right .75rem center/8px 10px no-repeat;
+                        // color: darken($color0-dark, 25%);
+                        filter: grayscale(1) invert(1);
+                        
+                    }
+                }
+            }
+            .table-sites {
+                border: 1px solid $border-dark-color; 
+                table {
+                    color: $color0-dark;
+                    background: $color9-dark;
+                    thead {
+                        border-bottom: 1px solid   $border-dark-color; 
+                        tr {
+                        
+                            background:  $color5-dark;
+                            border-left: 20px solid $color5-dark;
+                            border-right: 20px solid $color5-dark;
+                            border-bottom: 20px solid $color9-dark;
+                            th {
+                                color: darken($color0-dark, 25%) ;
+                                font-weight: bold !important;
+                                .custom-control-label::before {
+                                    background: none;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            border-bottom: 10px solid $color9-dark;
+                            border-right: 20px solid $color9-dark;
+                            border-left: 20px solid $color9-dark;
+                            background: $color7-dark;
+                            td {
+                                color: darken($color0-dark, 25%) ;
+                                font-weight: normal;
+                                .custom-control-label::before {
+                                    background: none;
+                                }
+                                i {
+                                    color: darken($color0-dark, 25%) ;
+                                }
+                            }
+                            &:nth-child(even) {
+                                background-color: $color8-dark;
+                                &:hover {
+                                     background-color: lighten($color8-dark, 5%);
+                                     cursor: pointer;
+                                    }
+                                }
+                                &:nth-child(odd) {
+
+                                    &:hover {
+                                    background-color: lighten($color7-dark, 5%);
+                                    cursor: pointer;
+                                }
+                                }
+                        }
+                    }
+                    tfoot {
+                        border-top: 20px solid $color9-dark;
+                        background: $color6-dark;
+                        tr {
+                           
+                            border-right: 20px solid $color6-dark;
+                            border-left: 20px solid $color6-dark;
+                            td {
+                                color: darken($color0-dark, 25%) ;
+                                font-weight: normal;
+
+                                .pagination .page-item .page-link {
+                                    color: $color0-dark;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $upload {
+        &.dark {
+            // background-color: rgb(52 11 241 / 13%);
+            // background-color: rgb(22 27 34);
+            .drop {
+                background: $color9-dark;
+                border: 2px dashed $border-dark-color;
+            }
+
+        }
+    }
+} 
