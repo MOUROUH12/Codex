@@ -6,19 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Futur Digital File Manager</title>
-
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- MDB -->
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">   
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
-    <!-- plugins -->
+    <!-- Mdb plugins -->
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/addons/datatables.min.css">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
-
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
-    <script src="./assets/js/script.js" defer></script>
+    <!-- filepond  -->
+    <link href="./assets/css/filepond.min.css" rel="stylesheet">
+    <link href="./assets/css/filepond-plugin-image-preview.min.css" rel="stylesheet">
+    <link href="./assets/css/filepond-plugin-image-edit.css" rel="stylesheet">
+    <link href="./assets/css//filepond-plugin-file-poster.css" rel="stylesheet">
+    <!-- app style -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+   
 </head>
 
 <body>
@@ -33,7 +37,7 @@
                     <span class="search-btn"><i class="fas fa-regular fa-caret-down"></i></span>
                 </li>
                 <li class="nav-actions">
-                    <button class="action-btn">
+                    <button class="action-btn changeThemeBtn">
                         <span class="ripple"></span>
                         <i class="fas fa-regular fa-circle-half-stroke"></i>
                     </button>
@@ -118,407 +122,7 @@
                         <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
                     </td>
                     </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check3">
-                            <label class="custom-control-label" for="check3"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check4">
-                            <label class="custom-control-label" for="check4"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check1">
-                            <label class="custom-control-label" for="check1"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check3">
-                            <label class="custom-control-label" for="check3"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check4">
-                            <label class="custom-control-label" for="check4"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check1">
-                            <label class="custom-control-label" for="check1"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check3">
-                            <label class="custom-control-label" for="check3"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check4">
-                            <label class="custom-control-label" for="check4"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check1">
-                            <label class="custom-control-label" for="check1"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check3">
-                            <label class="custom-control-label" for="check3"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check4">
-                            <label class="custom-control-label" for="check4"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check1">
-                            <label class="custom-control-label" for="check1"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check3">
-                            <label class="custom-control-label" for="check3"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check4">
-                            <label class="custom-control-label" for="check4"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check1">
-                            <label class="custom-control-label" for="check1"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>website.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check3">
-                            <label class="custom-control-label" for="check3"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>site.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    <tr>
-                    <td class="column1">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input item-check" id="check4">
-                            <label class="custom-control-label" for="check4"></label>
-                        <!-- </div> -->
-                    </td>
-                    <td class="column2"><svg><use href="#folder"></use></svg>domaine.fr</td>
-                    <td class="column3">dossier</td>
-                    <td class="column4">01/06/22 09:55</td>
-                    <td class="column5">0755</td>
-                    <td class="column6">devm:devm</td>
-                    <td class="column6">
-                        <button class="action-btn remove"><i class="fa-regular fa-trash-can"></i></button>
-                        <button class="action-btn update"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <button class="action-btn copy"><i class="fa-regular fa-copy"></i></button>
-                        <button class="action-btn direct-link"><a href="#" target="_blank"><i class="fas fa-regular fa-link"></i></a></button>
-                        
-                        <button class="action-btn moveTo"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button>        
-                        <button class="action-btn download"><i class="fas fa-regular fa-arrow-up-from-bracket"></i></button> 
-                        <button class="action-btn log"><i class="fas fa-light fa-list-ul"></i></button>       
-                    </td>
-                    </tr>
-                    
-                
-
-                
-                    
+     
                     </tbody>
                     <tfoot>
                         <tr>
@@ -549,6 +153,7 @@
     <div class="uploadBoxWrapper">
         <div class="overlay"></div>
         <div class="drop">
+     
           <div class="cont">
             <i class="fa fa-cloud-upload"></i>
             <div class="tit">Déposer ici les fichiers à téléverser</div>
@@ -557,11 +162,24 @@
                 cliquez ici pour parcourir
             </div>
           </div>
-          <output id="list"></output>
-          <form class="upload" method="post" action="" enctype="multipart/form-data" novalidate="">
-           
-              <input id="files"  title="" multiple="true" name="files[]" type="file" />
+        
+          <!-- <output id="list"></output> -->
+          <form class="upload" method="post" action="" enctype="multipart/form-data" >
+                <!-- <input type="hidden" name="p" value=""> -->
+                <!-- <input type="hidden" name="fullpath" id="fullpath" value="">  -->
+                <input type="file" 
+                class="filepond"
+                name="filepond"
+                multiple
+                data-max-file-size="10MB"
+                 />
+         
+         
+              <!-- <button id="uploadFilesBtn">Submit</button> -->
         </form>
+        <!-- <button class="closeUploadBox"><i class="fas fa-solid fa-xmark"></i> -->
+        
+        </button>
         </div>
       </div>
     <!-- Footer -->
@@ -1031,23 +649,25 @@
 
 
 
-    <!-- Scripts -->
+    <!-- MDB -->
     <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
     <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
-    <!-- plugins -->
+    <!-- MDB database plugins -->
     <script type="text/javascript" src="node_modules/mdbootstrap/js/addons/datatables.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-          $('#dtBasicExample').DataTable({
-            "paging": true  ,
-            // "pagingType": "simple"
-          });
-          $('.dataTables_length').addClass('bs-select');
-        });
-      </script>
+    <!-- filepond  -->
+    <script src="./assets/js/filepond-plugin-file-encode.min.js"></script>
+    <script src="./assets/js/filepond-plugin-file-validate-size.min.js"></script>
+    <script src="./assets/js/filepond-plugin-image-exif-orientation.min.js"></script>
+    <script src="./assets/js/filepond-plugin-image-preview.min.js"></script>
+    <script src="./assets/js/filepond-plugin-image-edit.js"></script>
+    <!-- <script src="./assets/js/filepond-plugin-file-poster.js"></script> -->
+    <!-- <script src="./assets/js/filepond-plugin-file-rename.js"></script>
+    <script src="./assets/js/filepond-plugin-image-crop.js"></script> -->
+    <script src="./assets/js/filepond.min.js"></script>
+    <!-- app script -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

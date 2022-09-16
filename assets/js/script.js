@@ -1,136 +1,138 @@
-// Query Dom elem
-const body = document.body;
-const header = document.querySelector('header');
-const main = document.querySelector('main');
-const uploadBoxWrapper = document.querySelector('.uploadBoxWrapper');
-const actionBtns = document.querySelectorAll('.action-btn');
-
-
-const classToggle = () => {
-    body.classList.toggle('dark');
-    header.classList.toggle('dark');
-    main.classList.toggle('dark');
-    uploadBoxWrapper.classList.toggle('dark');
-};
-
-
-actionBtns[0].addEventListener('click',function(){
-    classToggle();
-   
-})
 
 
 
 $(document).ready(() => {
 
-	$('.search-bar').append(
-		$('#dtBasicExample_filter > label > input')
-		.addClass('search-input')
-		.removeClass('form-control form-control-sm')
-		.attr('placeholder','Recherche')
-		)
-	$('.row-1  label').append($('#dtBasicExample_length > label > select'))
-	$('.row-1  label').prepend('Afficher')
-	$('.row-1  label').append('entrées')
-	$('#dtBasicExample_wrapper .row')[0].remove()
-	$('#dtBasicExample_wrapper > div:nth-child(2) > div.col-sm-12.col-md-5')[0].remove()
-	$('tfoot tr td:last-child').append($('div.dataTables_wrapper div.dataTables_paginate ul.pagination'))
-	$('#dtBasicExample_wrapper > div:nth-child(2)').remove()
+
+  // change theme 
+  $('.changeThemeBtn').on('click', function () {
+    $('body,header,main,.uploadBoxWrapper').toggleClass('dark');
+  })
 
 
-	$('#check-all').on('change',function(){
-		$('.item-check').each(function(idx,item){
-
-			$(item).attr('checked',$('#check-all').prop('checked'))
-		})
-	})
-	
-
-// Upload
-	$('.uploadBtn').click(function(){
-			$('.uploadBoxWrapper').addClass('grid').fadeToggle();
-
-	})
-
-	var drop = $("input");
-
-drop.on('dragenter', function (e) {
-	
-  $(".drop").css({
-    "border": "1px dotted #5606FF",
-    // "background": "rgba(0, 153, 255, .05)"
+  // MDB table 
+  $('#dtBasicExample').DataTable({
+    "paging": true,
+    "pagingType": "simple"
   });
-//   $(".cont").css({
-//     "color": "#09f"
-//   });
-}).on('dragleave', function (e) {
-  if($("#list span").length == 0){
-    $('.cont').removeClass('full');	
-}
+  $('.dataTables_length').addClass('bs-select');
 
-//   $(".drop").css({
-//     "border": "2px solid #DADFE3",
-//     "background": "transparent"
-//   });
-//   $(".cont").css({
-//     "color": "#8E99A5"
-//   });
-}).on('dragenter dragend drop', function (e) {
-	$('.cont').addClass('full');
+  // search bar
+  $('.search-bar').append(
+    $('#dtBasicExample_filter > label > input')
+    .addClass('search-input')
+    .removeClass('form-control form-control-sm')
+    .attr('placeholder', 'Recherche')
+  )
+  // items numbers select
+  $('.row-1  label').append($('#dtBasicExample_length > label > select'))
+  $('.row-1  label').prepend('Afficher')
+  $('.row-1  label').append('entrées')
+  // customize MDB appearance
+  $('#dtBasicExample_wrapper .row')[0].remove()
+  $('#dtBasicExample_wrapper > div:nth-child(2) > div.col-sm-12.col-md-5')[0].remove()
+  $('tfoot tr td:last-child').append($('div.dataTables_wrapper div.dataTables_paginate ul.pagination'))
+  $('#dtBasicExample_wrapper > div:nth-child(2)').remove()
 
+  $("#dtBasicExample_previous").removeClass('disabled')
+  // Costumize next & previous buttons
+  $("#dtBasicExample_previous > a").empty().append('<i title="précédent" class="fa-solid fa-arrow-left"></i>')
+  $("#dtBasicExample_next > a").empty().append('<i title="suivant" class="fa-solid fa-arrow-right"></i>')
+
+  // select files or folder checkbox
+  $('#check-all').on('change', function () {
+    $('.item-check').each(function (idx, item) {
+
+      $(item).attr('checked', $('#check-all').prop('checked'))
+    })
+  })
+
+
+  // header upload file 
+  $('.uploadBtn').click(function () {
+    $('.uploadBoxWrapper').toggleClass('active');
+    $('.uploadBoxWrapper').css({
+      "visibility": 'visible',
+      "opacity": '1'
+    });
+
+  })
+  // change label text en => fr 
+
+  // fade out the upload box
+  $('.overlay').click(function (e) {
+    $('.uploadBoxWrapper').removeClass('active');
+  })
+  $(window).on('load',function(){
+    // $('.filepond--root .filepond--drop-label label').html('Glisser & Déposer des fichiers ou <span class="filepond--label-action">Parcourir</span>');
+    $('.filepond--root .filepond--drop-label label').html('');
+  })
+
+
+    //Drag drop upload box 
+
+    $(".filepond").on('dragenter', function (e) {
+
+      $(" .cont i").css({
+        // "border": "1px dotted #5606FF",
+        "background-color":"rgba(78, 78, 78, 0.5)",
+        "transform":"translateY(-20px)"
+      });
+     
+    }).on('dragleave', function (e) {
+      $(" .cont i").css({
+        // "border": "1px dotted #5606FF",
+        "background-color":"rgba(78, 78, 78, 0.2)",
+        "transform":"none"
+      });
+     
+    }).on('drop', function (e) {
+      $(" .cont i").css({
+        // "border": "1px dotted #5606FF",
+        "background-color":"rgba(78, 78, 78, 0.2)",
+        "transform":"none"
+      });
+     
+    })
+  
+    $('.drop').on("dragenter dragend drop", function () {
+      console.log($("#list span").length);
+      if ($("#list span").length > 30) {
+        $('.drop').css('overflow-y', 'scroll');
+      }
+    })
 })
 
-$('.drop').on("dragenter dragend drop",function(){
-  console.log($("#list span").length);
-  if($("#list span").length > 30){
-    $('.drop').css('overflow-y','scroll');
-}
-})
+/*
+We want to preview images, so we need to register the Image Preview plugin
+*/
+FilePond.registerPlugin(
+	
+  // encodes the file as base64 data
+  FilePondPluginFileEncode,
+	
+	// validates the size of the file
+	FilePondPluginFileValidateSize,
+	
+	// corrects mobile image orientation
+	FilePondPluginImageExifOrientation,
+	
+	// previews dropped images
+  FilePondPluginImagePreview,
+
+  // file edit 
+  FilePondPluginImageEdit,
 
 
+);
 
-function handleFileSelect(evt) {
-  var files = evt.target.files; // FileList object
-	if(files.length > 48){
-			$('.drop').css('overflow-y','scroll');
-	}
-  // Loop through the FileList and render image files as thumbnails.
-  for (var i = 0, f; f = files[i]; i++) {
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      continue;
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-        // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                          '" title="', escape(theFile.name), '"/>'].join('');
-        document.getElementById('list').insertBefore(span, null);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-}
-
-$('#files').change(handleFileSelect);
-
-$('.overlay').click(function(e){
-  $('.uploadBoxWrapper').fadeOut();
-})
-
-// $.fn.dataTableExt.oStdClasses.sPageButtonStaticDisabled = "paginate_button_disabled";
-
- 
-    $("#dtBasicExample_previous").removeClass('disabled')
-
-})
-
+FilePond.create(
+	document.querySelector('.filepond'),
+  
+);
+FilePond.create(document.querySelector('input'), {
+  imageEditorAfterWriteImage: (res) => {
+      return res.dest;
+  },
+});
 
