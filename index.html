@@ -18,14 +18,21 @@
     <!-- filepond  -->
     <link href="./assets/css/filepond.min.css" rel="stylesheet">
     <link href="./assets/css/filepond-plugin-image-preview.min.css" rel="stylesheet">
-    <link href="./assets/css/filepond-plugin-image-edit.css" rel="stylesheet">
-    <link href="./assets/css//filepond-plugin-file-poster.css" rel="stylesheet">
+    <!-- <link href="./assets/css/filepond-plugin-image-edit.css" rel="stylesheet">
+    <link href="./assets/css//filepond-plugin-file-poster.css" rel="stylesheet"> -->
     <!-- app style -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
    
 </head>
 
-<body>
+<body>  
+    <div class="loader-wrapper">
+        <div class="loader">
+            <span>{</span>
+            <span>}</span>
+          </div>
+
+    </div>
     <header>
         <nav>
             <svg class="logo"><use href="#logo"></use></svg>
@@ -45,19 +52,19 @@
                         <span class="ripple"></span>
                         <i class="fas fa-regular fa-cloud-arrow-up"></i>
                     </button>
-                    <button class="action-btn">
+                    <button class="action-btn addElementBtn">
                         <span class="ripple"></span>
                         <i class="fas fa-regular fa-folder-plus"></i>
                     </button>
-                    <button class="action-btn">
+                    <button class="action-btn prfileBtn">
                         <span class="ripple"></span>
                         <i class="fa-solid fa-user"></i>  
                     </button>
-                    <button class="action-btn">
+                    <button class="action-btn siteListBtn">
                         <span class="ripple"></span>
                         <i class="fas fa-regular fa-list"></i>
                     </button>
-                    <button class="action-btn">
+                    <button class="action-btn logOutBtn">
                         <span class="ripple">
                             <i class="fas fa-regular fa-arrow-right-from-bracket"></i>
                     </button>
@@ -150,6 +157,7 @@
             
                 </div>
     </main>
+    <!-- image uploader -->
     <div class="uploadBoxWrapper">
         <div class="overlay"></div>
         <div class="drop">
@@ -182,13 +190,39 @@
         </button>
         </div>
       </div>
+      <!-- Add element popup -->
+      <div class="addElementModal">
+        <div class="addElemModalOverlay"></div>
+        <div class="addElementModalBox">
+                <div class="addElementModalHeader">
+                    <h3>Créer un nouvel élément</h3>
+                    <i class="fas fa-times closeAddElemModalBoxBtn" ></i>
+                </div>
+                <div class="addElementModalBody">
+                    <p class="fileType">
+                        <span>Type d'élement</span>
+                        <label><input type="radio" name="newfile" id="fileOption1" checked><label for="fileOption1" class="radioBtn" ><span></span></label><samp class="samp1 checked"><i class="fa-solid fa-file"></i>Fichier</samp></label>
+                        <label><input type="radio" name="newfile" id="folderOptio2"><label for="folderOptio2" class="radioBtn" ><span></span></label><samp class="samp2"><i class="fa-solid fa-folder-open"></i>Dossier</samp></label>
+                
+                    </p>
+                    <p class="input-p">
+                        <input type="text" placeholder="Nom de l'élément" name="fileName" id="inputEelemName">
+                        <p><small class="fileNameValidation"></small></p>
+                    </p>
+                </div>
+                <div class="addElementModalFooter">
+                    <button class="cancelBtn"> <i class="fas fa-times" ></i>Annuler</button>
+                    <button class="createFileBtn"><i class="fa-solid fa-plus"></i>Créer</button>
+                </div>
+        </div>
+    </div>
     <!-- Footer -->
 
-    <footer>
+    <!-- <footer>
         <h3>&lt;h1> Futur Digital 	&lt;/h1></h3>
     </footer>
 
-
+ -->
 
 
 
@@ -661,7 +695,7 @@
     <script src="./assets/js/filepond-plugin-file-validate-size.min.js"></script>
     <script src="./assets/js/filepond-plugin-image-exif-orientation.min.js"></script>
     <script src="./assets/js/filepond-plugin-image-preview.min.js"></script>
-    <script src="./assets/js/filepond-plugin-image-edit.js"></script>
+    <!-- <script src="./assets/js/filepond-plugin-image-edit.js"></script> -->
     <!-- <script src="./assets/js/filepond-plugin-file-poster.js"></script> -->
     <!-- <script src="./assets/js/filepond-plugin-file-rename.js"></script>
     <script src="./assets/js/filepond-plugin-image-crop.js"></script> -->

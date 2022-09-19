@@ -40,10 +40,61 @@ body.dark {
   font-weight: normal;
 }
 body.dark .overlay {
-  background: #161B22;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.75);
 }
 
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  background: #ffffff;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #57606A;
+}
+.loader-wrapper.dark {
+  background: #0D1117;
+  color: #fff;
+}
+.loader-wrapper .loader {
+  font-family: "Fira Code", monospace;
+  font-weight: bold;
+  font-size: 10vh;
+}
+.loader-wrapper .loader span {
+  display: inline-block;
+  -webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+  animation: pulse 0.4s alternate infinite ease-in-out;
+}
+.loader-wrapper .loader span:nth-child(odd) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
 header {
   position: fixed;
   top: 0;
@@ -660,7 +711,7 @@ main.dark .table-sites table tfoot tr td .pagination .page-item .page-link {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.2196078431);
   opacity: 0.5;
   display: none;
   -webkit-transition: 0.4s ease-in-out;
@@ -693,7 +744,7 @@ main.dark .table-sites table tfoot tr td .pagination .page-item .page-link {
   font-size: 1.5rem;
 }
 .uploadBoxWrapper .drop .cont i {
-  font-size: 4rem;
+  font-size: 3rem;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
@@ -754,26 +805,6 @@ main.dark .table-sites table tfoot tr td .pagination .page-item .page-link {
   background: #161B22;
 }
 
-footer {
-  width: 100%;
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-footer h3 {
-  font-family: "Fira Code", monospace;
-  font-size: 1.2rem;
-  color: #57606A;
-  opacity: 0.8;
-}
-
 .paginate_button_disabled {
   border: 1px solid #aaa;
   border-radius: 5px;
@@ -823,4 +854,243 @@ input.filepond--browser {
 
 .filepond--hopper[data-hopper-state=drag-over] > * {
   pointer-events: all !important;
+}
+
+.addElementModal {
+  z-index: 99999;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.addElementModal .addElemModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.282);
+}
+.addElementModal .addElementModalBox {
+  position: relative;
+  z-index: 9999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  padding: 30px 50px;
+  border-radius: 5px;
+  min-width: 500px;
+}
+.addElementModal .addElementModalBox .addElementModalHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.addElementModal .addElementModalBox .addElementModalHeader i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+.addElementModal .addElementModalBox .addElementModalHeader i:hover {
+  color: #FF0624;
+}
+.addElementModal .addElementModalBox .addElementModalBody {
+  margin-top: 40px;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-left: 10px;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType label i {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType label input {
+  margin-left: 10px;
+  display: none;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType label .checked {
+  color: #5606FF;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType .radioBtn {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 2px solid currentColor;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2px;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType .radioBtn span {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: transparent;
+  display: inline-block;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType input[type=radio]:checked + .radioBtn span {
+  background: #5606FF;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileType input[type=radio]:checked + samp {
+  color: #5606FF;
+}
+.addElementModal .addElementModalBox .addElementModalBody #inputEelemName {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+.addElementModal .addElementModalBox .addElementModalBody #inputEelemName:focus {
+  border-color: #57606A !important;
+}
+.addElementModal .addElementModalBox .addElementModalBody .input-p {
+  margin-bottom: 4px;
+}
+.addElementModal .addElementModalBox .addElementModalBody .fileNameValidation {
+  color: #FF0624;
+}
+.addElementModal .addElementModalBox .addElementModalFooter {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button {
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20PX;
+  border: 1px solid transparent;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button:last-child {
+  margin-left: 10px;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button i {
+  margin-right: 10px;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button:first-child {
+  background: #FF0624;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button:first-child:hover {
+  background: transparent;
+  border: 1px solid #FF0624;
+  color: #FF0624;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button:last-child {
+  background: #00750C;
+}
+.addElementModal .addElementModalBox .addElementModalFooter button:last-child:hover {
+  background: transparent;
+  border: 1px solid #00750C;
+  color: #00750C;
+}
+.addElementModal.dark {
+  color: #57606A;
+  font-weight: normal;
+}
+.addElementModal.dark .addElemModalOverlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+.addElementModal.dark .addElementModalBox {
+  background: #161B22;
+}
+.addElementModal.dark #inputEelemName {
+  color: #bfbfbf;
+  background: #0D1117;
+  border-color: rgb(31, 41, 55);
+  font-weight: normal;
+}
+.addElementModal.dark #inputEelemName::-webkit-input-placeholder {
+  color: #666666;
+}
+.addElementModal.dark #inputEelemName::-moz-placeholder {
+  color: #666666;
+}
+.addElementModal.dark #inputEelemName:-ms-input-placeholder {
+  color: #666666;
+}
+.addElementModal.dark #inputEelemName::-ms-input-placeholder {
+  color: #666666;
+}
+.addElementModal.dark #inputEelemName::placeholder {
+  color: #666666;
+}
+
+footer {
+  width: 100%;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer h3 {
+  font-family: "Fira Code", monospace;
+  font-size: 1.2rem;
+  color: #57606A;
+  opacity: 0.8;
 }

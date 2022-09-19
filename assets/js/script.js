@@ -1,14 +1,26 @@
-
-
-
 $(document).ready(() => {
-
+  $(window).on("load",function(){
+    setTimeout(function(){
+      $(".loader-wrapper").fadeOut()
+    },800)
+  })
 
   // change theme 
   $('.changeThemeBtn').on('click', function () {
-    $('body,header,main,.uploadBoxWrapper').toggleClass('dark');
-  })
+    $('body,header,main,.uploadBoxWrapper,.addElementModal').toggleClass('dark');
+    if($('body').hasClass('dark')){
+      setCookie('theme','dark')
+    }else{
+      setCookie('theme','light')
 
+    }
+  })
+    let theme = getCookie("theme");
+        if(theme === 'dark') {
+          $('body,header,main,.uploadBoxWrapper,.addElementModal').toggleClass('dark');
+        }
+  
+ 
 
   // MDB table 
   $('#dtBasicExample').DataTable({
@@ -60,79 +72,156 @@ $(document).ready(() => {
   // change label text en => fr 
 
   // fade out the upload box
-  $('.overlay').click(function (e) {
+  $('.overlay,.addElementBtn,.prfileBtn, .siteListBtn, .logOutBtn').click(function (e) {
     $('.uploadBoxWrapper').removeClass('active');
   })
-  $(window).on('load',function(){
+  $(window).on('load', function () {
     // $('.filepond--root .filepond--drop-label label').html('Glisser & Déposer des fichiers ou <span class="filepond--label-action">Parcourir</span>');
     $('.filepond--root .filepond--drop-label label').html('');
   })
 
 
-    //Drag drop upload box 
+  //Drag drop upload box 
 
-    $(".filepond").on('dragenter', function (e) {
+  $(".filepond").on('dragenter', function (e) {
 
-      $(" .cont i").css({
-        // "border": "1px dotted #5606FF",
-        "background-color":"rgba(78, 78, 78, 0.5)",
-        "transform":"translateY(-20px)"
-      });
+    $(" .cont i").css({
+      // "border": "1px dotted #5606FF",
+      "background-color": "#5606FF",
+      "transform": "translateY(-20px)"
+    });
+
+  }).on('dragleave', function (e) {
+    $(" .cont i").css({
+      // "border": "1px dotted #5606FF",
+      "background-color": "rgba(78, 78, 78, 0.2)",
+      "transform": "none"
+    });
+
+  }).on('drop', function (e) {
+    $(" .cont i").css({
+      // "border": "1px dotted #5606FF",
+      "background-color": "rgba(78, 78, 78, 0.2)",
+      "transform": "none"
+    });
+
+  })
+
+  $('.drop').on("dragenter dragend drop", function () {
+    console.log($("#list span").length);
+    if ($("#list span").length > 30) {
+      $('.drop').css('overflow-y', 'scroll');
+    }
+  })
+  // modifier le nom d'un fichier/dossier modal
+
+  $('.closeAddElemModalBoxBtn , .cancelBtn , .addElemModalOverlay, .uploadBtn, .prfileBtn, .siteListBtn, .logOutBtn').on('click', function () {
+    $('.addElementModal').fadeOut()
+  })
+  $('.addElementBtn').on('click', function () {
+    $('.addElementModal').css('display','flex').fadeIn()
+  })
+
+  // validation de nom de fichier/dossier entré par  l'utilisateur 👱🏽‍♂️ | 👱🏽‍♀️
+ 
+  const errors = {
+    name: ''
+  }
+
+  function validateName(name) {
+    const regexp = new RegExp(/^[a-zA-Z0-9.\-_]+$/); //regular expression of file | folder
+    let isValid = false;
+    if (!regexp.test(name)) {
+      errors.name = 'Veuillez entrer un nom valide'; //message de validation
+    } else {
+      errors.name = '';
+      isValid = true;
+    }
+    return isValid;
+  }
+
+  $('.createFileBtn').on('click', function () {
+    if (!$('#inputEelemName').val() || $('#inputEelemName').val().trim().length == 0) {
+      $('.fileNameValidation').text('Veuillez enter un nom')
+    } else if (!validateName($('#inputEelemName').val())) {
+      $('.fileNameValidation').text(errors.name)
+
+    }
+  })
+  $('#inputEelemName').on('input', function () {
+    if (!$('#inputEelemName').val() || $('#inputEelemName').val().trim().length == 0) {
+      $('.fileNameValidation').text('Veuillez enter un nom')
+    } else if (!validateName($(this).val())) {
+      $('.fileNameValidation').text(errors.name)
+
+    } else {
+      $('.fileNameValidation').text('')
+    }
+  })
+
+  // 
+   $('#fileOption1').on('change',function(){
+      if($(this).prop('checked')){
+        $('.samp2').removeClass('checked')
+        $('.samp1').addClass('checked')
+        console.log('checked1')
+      } 
      
-    }).on('dragleave', function (e) {
-      $(" .cont i").css({
-        // "border": "1px dotted #5606FF",
-        "background-color":"rgba(78, 78, 78, 0.2)",
-        "transform":"none"
-      });
+   })
+   $('#folderOptio2').on('change',function(){
+      if($(this).prop('checked')){
+        $('.samp1').removeClass('checked')
+        $('.samp2').addClass('checked')
+      } 
      
-    }).on('drop', function (e) {
-      $(" .cont i").css({
-        // "border": "1px dotted #5606FF",
-        "background-color":"rgba(78, 78, 78, 0.2)",
-        "transform":"none"
-      });
-     
-    })
-  
-    $('.drop').on("dragenter dragend drop", function () {
-      console.log($("#list span").length);
-      if ($("#list span").length > 30) {
-        $('.drop').css('overflow-y', 'scroll');
+   })
+
+   function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
       }
-    })
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 })
 
-/*
-We want to preview images, so we need to register the Image Preview plugin
-*/
+// initialisation de filepond 
 FilePond.registerPlugin(
-	
+
   // encodes the file as base64 data
   FilePondPluginFileEncode,
-	
-	// validates the size of the file
-	FilePondPluginFileValidateSize,
-	
-	// corrects mobile image orientation
-	FilePondPluginImageExifOrientation,
-	
-	// previews dropped images
+
+  // validates the size of the file
+  FilePondPluginFileValidateSize,
+
+  // corrects mobile image orientation
+  FilePondPluginImageExifOrientation,
+
+  // previews dropped images
   FilePondPluginImagePreview,
 
-  // file edit 
-  FilePondPluginImageEdit,
+
 
 
 );
 
 FilePond.create(
-	document.querySelector('.filepond'),
-  
-);
-FilePond.create(document.querySelector('input'), {
-  imageEditorAfterWriteImage: (res) => {
+  document.querySelector('.filepond'), {
+    imageEditorAfterWriteImage: (res) => {
       return res.dest;
-  },
-});
-
+    },
+  });

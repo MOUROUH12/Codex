@@ -18,7 +18,7 @@
   }
 
 
-@mixin darkTheme($header:false,$main:false,$footer:false,$body:false,$upload:false) {
+@mixin darkTheme($header:false,$main:false,$footer:false,$body:false,$upload:false,$addElemenModal:false,$loader:false) {
     @if $header {
         &.dark {
             background: $color1-dark;
@@ -65,8 +65,8 @@
             color: $color0-light;
             font-weight: normal;
             .overlay {
-                background: $color1-dark;
-                opacity: 0.5;
+                background: rgba(0, 0, 0, 0.75);
+                
             } 
         }
 
@@ -170,6 +170,37 @@
                 background: $color9-dark;
                 // border: 2px dashed $border-dark-color;
             }
+
+        }
+    }
+    @if $addElemenModal {
+        &.dark{
+        
+            color: $color0-light;
+            font-weight: normal;
+            .addElemModalOverlay {
+                background: rgb(0 0 0 / 75%);
+                // opacity: 0.5;
+            } 
+            .addElementModalBox {
+                background: $color1-dark;
+            }
+            #inputEelemName {
+                color: darken($color0-dark, 25%) ;
+                background: $color2-dark;
+                border-color: $border-dark-color;
+                font-weight: normal;
+                &::placeholder {
+                    color: darken($color0-dark, 60%) ;
+                }
+            }
+        }
+
+    }
+    @if $loader {
+        &.dark {
+            background:  $color4-dark;
+            color: $color0-dark;
 
         }
     }
