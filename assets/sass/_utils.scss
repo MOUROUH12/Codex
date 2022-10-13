@@ -6,19 +6,53 @@
 
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
     background: #e4e4e4;
     border-radius: 8px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: $color2-dark;
+    background-color: rgb(107, 107, 107);
     border-radius: 10px;
     border: 2px solid rgb(219, 219, 219);
   }
 
 
-@mixin darkTheme($header:false,$main:false,$footer:false,$body:false,$upload:false,$addElemenModal:false,$loader:false) {
+@mixin darkTheme($header:false,$main:false,$footer:false,$body:false,$upload:false,$addElemenModal:false,$loader:false,$profil:false,$advancedSearch:false) {
+    @if $advancedSearch{
+        &.dark{
+            
+            color: $color0-light;
+            .advancedSearchOverlay {
+                background: rgb(0 0 0 / 75%);
+                opacity: 1;
+            } 
+            .content {
+                background: $color1-dark;
+            }
+            .advancedSearchHeader  {
+                .searchBar {
+
+                    input {
+                        color: darken($color0-dark, 25%) ;
+                        background: $color2-dark;
+                        border-color: $border-dark-color;
+                        font-weight: normal;
+                        &::placeholder {
+                            color: darken($color0-dark, 60%) ;
+                        }
+                    }
+                }
+
+            }
+            .searchResult {
+                li {
+                    background: $color2-dark;
+                }
+            }
+        }
+    }
     @if $header {
         &.dark {
             background: $color1-dark;
@@ -45,6 +79,21 @@
                             color:  darken($color0-dark, 45%);
                         }
                     }
+                    .search-btn {
+                        // position: relative;
+                        i {
+                            &:hover {
+                                color:  darken($color0-dark, 45%);
+                            }
+                        }
+                        .tooltiptext {
+                           
+                            color: darken($color0-dark, 25%) ;
+                            background: $color2-dark;
+                             border-color: $border-dark-color;
+                          
+                        }
+                   }
                 }
                 .nav-actions {
                  button {
@@ -52,6 +101,9 @@
                     color: darken($color0-dark, 20%);
                     &:hover {
                         background:lighten( $color3-dark , 10%);
+                    }
+                    a {
+                        color: $color0-dark ;
                     }
                  }
                 }
@@ -61,18 +113,22 @@
     }
     @if $body {
         &.dark{
+            
             background: $color4-dark;
             color: $color0-light;
             font-weight: normal;
             .overlay {
                 background: rgba(0, 0, 0, 0.75);
-                
+                opacity: 1;
             } 
+
+            
         }
 
     }
     @if $main {
         &.dark{
+
             .row-1  {
                 label {
                     color: darken($color0-dark, 25%);
@@ -122,6 +178,71 @@
                                 i {
                                     color: darken($color0-dark, 25%) ;
                                 }
+
+                                &.column6 {
+                                    button {
+                                        cursor: pointer;
+                                        padding: 0 8px;
+                                        background: none;
+                                        border: none;
+                                        outline: none;
+                                        font-size: 1rem;
+                                        color: $color0-light;
+                                        &:nth-child(1){
+                                            & i:hover {
+                                                color: $color10;
+                                            }
+                                        }
+                                        &:nth-child(2){
+                                            & i:hover {
+                                                color: $color16 ;
+                                            }
+                                        }
+                                        &:nth-child(3){
+                                            & i:hover {
+                                                color: $color14 ;
+                                            }
+                                        }
+                                        &:nth-child(4){
+                                            a {
+                                                & i:hover {
+                                                    color: $color12 ;
+                                                }
+        
+                                            }
+                                        }
+                                        &:nth-child(5){
+                                 
+                                                & i:hover {
+                                                    color: $color15 ;
+                                                }
+        
+                                        }
+                                        &:nth-child(6){
+                                           
+                                                & i:hover {
+                                                    color: $color17 ;
+                                                }
+        
+                                            
+                                        }
+                                        &:nth-child(7){
+                                           
+                                                & i:hover {
+                                                    color: $color11 ;
+                                                }
+        
+                                            
+                                        }
+                                        a {
+                                            color: $color0-light;
+        
+                                        }
+                                        &.download {
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+                                }
                             }
                             &:nth-child(even) {
                                 background-color: $color8-dark;
@@ -138,6 +259,7 @@
                                 }
                                 }
                         }
+                        
                     }
                     tfoot {
                         border-top: 20px solid $color9-dark;
@@ -161,6 +283,34 @@
             }
         }
     }
+    @if $profil {
+        &.dark {
+            // background-color: rgb(52 11 241 / 13%);
+            // background-color: rgb(22 27 34);
+
+           h1 {
+            background-color:  $color2-dark;
+            border-bottom: 1px solid $border-dark-color;
+           }
+           .profil {
+            border-left: 1px solid $border-dark-color;
+            background: $color9-dark;
+            textarea {
+                color: darken($color0-dark, 25%) ;
+                background: $color2-dark;
+             
+                &::placeholder {
+                    color: darken($color0-dark, 60%) ;
+                }
+            }
+            select {
+                color: darken($color0-dark, 25%) ;
+                background: $color2-dark;
+            }
+           }
+
+        }
+    }
     @if $upload {
         &.dark {
             // background-color: rgb(52 11 241 / 13%);
@@ -180,7 +330,7 @@
             font-weight: normal;
             .addElemModalOverlay {
                 background: rgb(0 0 0 / 75%);
-                // opacity: 0.5;
+                opacity: 1;
             } 
             .addElementModalBox {
                 background: $color1-dark;
@@ -199,7 +349,9 @@
     }
     @if $loader {
         &.dark {
-            background:  $color4-dark;
+            background-color:  $color4-dark;
+            background-image: url(../images/codex.svg);
+            background-blend-mode: soft-light;
             color: $color0-dark;
 
         }
