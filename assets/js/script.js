@@ -1,13 +1,15 @@
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 let theme = getCookie("theme");
-if(dark && theme !== 'light'){
-  $('body,header,main,.uploadBoxWrapper,.addElementModal,.loader-wrapper,.profil-wrapper,.advancedSearch').addClass('dark');
-  console.log("Dark theme")
+if(!dark && theme === 'light'){
+  $('body,header,main,.uploadBoxWrapper,.addElementModal,.loader-wrapper,.profil-wrapper,.advancedSearch').removeClass('dark');
+  console.log("light theme")
 }
 
-if(theme === 'dark') {
-  $('body,header,main,.uploadBoxWrapper,.addElementModal,.profil-wrapper,.advancedSearch').addClass('dark');
+if(theme === 'light') {
+  $('body,header,main,.uploadBoxWrapper,.addElementModal,.profil-wrapper,.advancedSearch,.loader-wrapper').removeClass('dark');
 }
+
+// $('body,header,main,.uploadBoxWrapper,.addElementModal,.loader-wrapper,.profil-wrapper,.advancedSearch').addClass('dark');
 
 
 function setCookie(cname, cvalue, exdays) {
@@ -41,7 +43,10 @@ $(document).ready(() => {
     // })
 
   $('.go-back-btn').click(function(){
-    history.go(-1)
+    history.go(-1);
+  });
+  $('.go-forward-btn').click(function(){
+    history.forward();
   });
   $('.closeAdvancedSearch,.advancedSearchOverlay,.addElementBtn, .siteListBtn, .logOutBtn,.uploadBtn,.prfileBtn').on('click',function(){
     $('.advancedSearch').fadeOut()

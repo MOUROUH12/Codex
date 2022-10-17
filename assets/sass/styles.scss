@@ -261,6 +261,15 @@ main {
                     margin-right: 10px;
                 }
                 &:nth-child(1) {
+                    background: $color12;
+                    &:hover {
+                        // background: darken($color10,5%);
+                        background: transparent;
+                        color: $color12;
+                        border: 1px solid $color12;
+                    }
+                }
+                &:nth-child(2) {
                     background: $color10;
                     &:hover {
                         // background: darken($color10,5%);
@@ -268,8 +277,9 @@ main {
                         color: $color10;
                         border: 1px solid $color10;
                     }
+
                 }
-                &:nth-child(2) {
+                &:nth-child(3) {
                     background: $color11;
                     &:hover {
                         // background: darken($color10,5%);
@@ -277,9 +287,17 @@ main {
                         color: $color11;
                         border: 1px solid $color11;
                     }
-
                 }
-                &:nth-child(3) {
+                &:nth-child(4) {
+                    background: $color15;
+                    &:hover {
+                        // background: darken($color10,5%);
+                        background: transparent;
+                        color: $color15;
+                        border: 1px solid $color15;
+                    }
+                }
+                &:nth-child(5) {
                     background: $color12;
                     &:hover {
                         // background: darken($color10,5%);

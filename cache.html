@@ -25,8 +25,8 @@
    
 </head>
 
-<body>  
-    <div class="loader-wrapper">
+<body class="dark">  
+    <div class="loader-wrapper dark">
         <div class="loader">
             <svg id="codex" width="1056" height="257" viewBox="0 0 1056 257" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-outside-1_28_9" maskUnits="userSpaceOnUse" x="0.461548" y="0.615417" width="1056" height="256" fill="black">
@@ -49,7 +49,7 @@
         </div>
 
     </div>
-    <header>
+    <header class="dark">
         <nav>
             <a href="index.html"><svg class="logo"><use href="#logo"></use></svg></a>
             <ul>
@@ -96,16 +96,18 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="dark">
             <div class="row-1">
           
 
                 <label ></label>
-            <div class="file-actions">
+                <div class="file-actions">
+                    <button class="go-back-btn"><i class="fa-solid fa-arrow-left-long"></i>Retour</button>
                     <button><i class="fa-solid fa-trash-can"></i>Supprimer</button>
                     <button><i class="fa-solid fa-file-zipper"></i>Zip</button>
                     <button><i class="fa-solid fa-copy"></i>Copier</button>
-            </div>
+                    <!-- <button class="go-forward-btn">Suivant <i class="fa-solid fa-arrow-right-long"></i></button> -->
+                </div>
 
             </div>
             <div class="table-sites">
@@ -208,7 +210,7 @@
                 </div>
     </main>
     <!-- image uploader -->
-    <div class="uploadBoxWrapper">
+    <div class="uploadBoxWrapper dark">
         <div class="overlay"></div>
         <div class="drop">
      
@@ -241,7 +243,7 @@
         </div>
       </div>
       <!-- Profile -->
-      <div class="profil-wrapper">
+      <div class="profil-wrapper dark">
         <div class="profilOverlay"></div>
           <h1 class="profil-header"><i class="fa-solid fa-gear"></i>Profil</h1>
           <div class="profil">
@@ -260,7 +262,7 @@ beauty.fr
                     <label for="editor">Editeur</label>
                     <select name="editor" id="editor"> 
                         <option value="vscode" selected>Visual Studio Code</option>
-                      <option value="sublime">Sublime</option>
+                      <!-- <option value="sublime">Sublime</option> -->
                     </select>
                     
                   </div>
@@ -277,7 +279,7 @@ beauty.fr
           </div>
       </div>
     <!-- advanced search  -->
-    <div class="advancedSearch">
+    <div class="advancedSearch dark">
         <div class="inner-wrapper">
             <div class="advancedSearchOverlay"></div>
             <div class="content">
@@ -299,7 +301,7 @@ beauty.fr
         </div>
     </div>
       <!-- Add element popup -->
-      <div class="addElementModal">
+      <div class="addElementModal dark">
         <div class="addElemModalOverlay"></div>
         <div class="addElementModalBox">
                 <div class="addElementModalHeader">

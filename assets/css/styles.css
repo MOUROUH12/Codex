@@ -391,25 +391,41 @@ main .row-1 .file-actions button i {
   margin-right: 10px;
 }
 main .row-1 .file-actions button:nth-child(1) {
-  background: #FF0624;
+  background: #5606FF;
 }
 main .row-1 .file-actions button:nth-child(1):hover {
+  background: transparent;
+  color: #5606FF;
+  border: 1px solid #5606FF;
+}
+main .row-1 .file-actions button:nth-child(2) {
+  background: #FF0624;
+}
+main .row-1 .file-actions button:nth-child(2):hover {
   background: transparent;
   color: #FF0624;
   border: 1px solid #FF0624;
 }
-main .row-1 .file-actions button:nth-child(2) {
+main .row-1 .file-actions button:nth-child(3) {
   background: #FF8D06;
 }
-main .row-1 .file-actions button:nth-child(2):hover {
+main .row-1 .file-actions button:nth-child(3):hover {
   background: transparent;
   color: #FF8D06;
   border: 1px solid #FF8D06;
 }
-main .row-1 .file-actions button:nth-child(3) {
+main .row-1 .file-actions button:nth-child(4) {
+  background: #00750C;
+}
+main .row-1 .file-actions button:nth-child(4):hover {
+  background: transparent;
+  color: #00750C;
+  border: 1px solid #00750C;
+}
+main .row-1 .file-actions button:nth-child(5) {
   background: #5606FF;
 }
-main .row-1 .file-actions button:nth-child(3):hover {
+main .row-1 .file-actions button:nth-child(5):hover {
   background: transparent;
   color: #5606FF;
   border: 1px solid #5606FF;
